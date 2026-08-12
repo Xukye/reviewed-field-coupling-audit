@@ -1,0 +1,1157 @@
+[
+ {
+  "a": "CLI.C.569104875",
+  "cond": "盲二审",
+  "out": 0.0,
+  "raw": "F 0",
+  "model": "deepseek-v4-pro"
+ },
+ {
+  "a": "CLI.C.565931868",
+  "cond": "盲二审",
+  "out": 815.0,
+  "raw": "F 815",
+  "model": "deepseek-v4-pro"
+ },
+ {
+  "a": "CLI.C.573182705",
+  "cond": "盲二审",
+  "out": 17933.0,
+  "raw": "F 17933",
+  "model": "deepseek-v4-pro"
+ },
+ {
+  "a": "CLI.C.573727328",
+  "cond": "盲二审",
+  "out": 0.0,
+  "raw": "T 0",
+  "model": "deepseek-v4-pro"
+ },
+ {
+  "a": "CLI.C.574130618",
+  "cond": "盲二审",
+  "out": 0.0,
+  "raw": "F 0",
+  "model": "deepseek-v4-pro"
+ },
+ {
+  "a": "CLI.C.574062348",
+  "cond": "盲二审",
+  "out": 8853.06,
+  "raw": "F 8853.06",
+  "model": "deepseek-v4-pro"
+ },
+ {
+  "a": "CLI.C.573309786",
+  "cond": "盲二审",
+  "out": 9356.14,
+  "raw": "F 9356.14",
+  "model": "deepseek-v4-pro"
+ },
+ {
+  "a": "CLI.C.573346800",
+  "cond": "盲二审",
+  "out": 1135.0,
+  "raw": "F 1135",
+  "model": "deepseek-v4-pro"
+ },
+ {
+  "a": "CLI.C.573414919",
+  "cond": "盲二审",
+  "out": 11042.3,
+  "raw": "F 11042.30",
+  "model": "deepseek-v4-pro"
+ },
+ {
+  "a": "CLI.C.574528636",
+  "cond": "盲二审",
+  "out": 0.0,
+  "raw": "F 0",
+  "model": "deepseek-v4-pro"
+ },
+ {
+  "a": "CLI.C.574557652",
+  "cond": "盲二审",
+  "out": 12939.0,
+  "raw": "F 12939",
+  "model": "deepseek-v4-pro"
+ },
+ {
+  "a": "CLI.C.574900316",
+  "cond": "盲二审",
+  "out": 11639.29,
+  "raw": "F 11639.29",
+  "model": "deepseek-v4-pro"
+ },
+ {
+  "a": "CLI.C.574978285",
+  "cond": "盲二审",
+  "out": 0.0,
+  "raw": "T 0",
+  "model": "deepseek-v4-pro"
+ },
+ {
+  "a": "CLI.C.574916504",
+  "cond": "盲二审",
+  "out": 27853.26,
+  "raw": "F 27853.26",
+  "model": "deepseek-v4-pro"
+ },
+ {
+  "a": "CLI.C.574614291",
+  "cond": "盲二审",
+  "out": 18058.0,
+  "raw": "F 18058",
+  "model": "deepseek-v4-pro"
+ },
+ {
+  "a": "CLI.C.574984000",
+  "cond": "盲二审",
+  "out": 30742.05,
+  "raw": "F 30742.05",
+  "model": "deepseek-v4-pro"
+ },
+ {
+  "a": "CLI.C.575511613",
+  "cond": "盲二审",
+  "out": 0.0,
+  "raw": "F 0",
+  "model": "deepseek-v4-pro"
+ },
+ {
+  "a": "CLI.C.574921347",
+  "cond": "盲二审",
+  "out": 20156.58,
+  "raw": "F 20156.58",
+  "model": "deepseek-v4-pro"
+ },
+ {
+  "a": "CLI.C.575048370",
+  "cond": "盲二审",
+  "out": 8993.85,
+  "raw": "F 8993.85",
+  "model": "deepseek-v4-pro"
+ },
+ {
+  "a": "CLI.C.575005415",
+  "cond": "盲二审",
+  "out": 0.0,
+  "raw": "F 0",
+  "model": "deepseek-v4-pro"
+ },
+ {
+  "a": "CLI.C.574889926",
+  "cond": "盲二审",
+  "out": 0.0,
+  "raw": "T 0",
+  "model": "deepseek-v4-pro"
+ },
+ {
+  "a": "CLI.C.575813894",
+  "cond": "盲二审",
+  "out": 32608.26,
+  "raw": "F 32608.26",
+  "model": "deepseek-v4-pro"
+ },
+ {
+  "a": "CLI.C.575558178",
+  "cond": "盲二审",
+  "out": 5019.74,
+  "raw": "F 5019.74",
+  "model": "deepseek-v4-pro"
+ },
+ {
+  "a": "CLI.C.575667948",
+  "cond": "盲二审",
+  "out": 0.0,
+  "raw": "T 0",
+  "model": "deepseek-v4-pro"
+ },
+ {
+  "a": "CLI.C.575829437",
+  "cond": "盲二审",
+  "out": 0.0,
+  "raw": "F 0",
+  "model": "deepseek-v4-pro"
+ },
+ {
+  "a": "CLI.C.575865762",
+  "cond": "盲二审",
+  "out": 0.0,
+  "raw": "F 0",
+  "model": "deepseek-v4-pro"
+ },
+ {
+  "a": "CLI.C.574794906",
+  "cond": "盲二审",
+  "out": 0.0,
+  "raw": "F 0",
+  "model": "deepseek-v4-pro"
+ },
+ {
+  "a": "CLI.C.576020807",
+  "cond": "盲二审",
+  "out": 100728.0,
+  "raw": "F 100728",
+  "model": "deepseek-v4-pro"
+ },
+ {
+  "a": "CLI.C.574982319",
+  "cond": "盲二审",
+  "out": 16682.08,
+  "raw": "F 16682.08",
+  "model": "deepseek-v4-pro"
+ },
+ {
+  "a": "CLI.C.565947974",
+  "cond": "盲二审",
+  "out": 1528.34,
+  "raw": "F 1528.34",
+  "model": "deepseek-v4-pro"
+ },
+ {
+  "a": "CLI.C.576546142",
+  "cond": "盲二审",
+  "out": 70351.73,
+  "raw": "F 70351.73",
+  "model": "deepseek-v4-pro"
+ },
+ {
+  "a": "CLI.C.566365968",
+  "cond": "盲二审",
+  "out": 40809.8,
+  "raw": "F 40809.80",
+  "model": "deepseek-v4-pro"
+ },
+ {
+  "a": "CLI.C.566474673",
+  "cond": "盲二审",
+  "out": 0.0,
+  "raw": "T 0",
+  "model": "deepseek-v4-pro"
+ },
+ {
+  "a": "CLI.C.567123423",
+  "cond": "盲二审",
+  "out": 0.0,
+  "raw": "F 0",
+  "model": "deepseek-v4-pro"
+ },
+ {
+  "a": "CLI.C.567124137",
+  "cond": "盲二审",
+  "out": 0.0,
+  "raw": "F 0",
+  "model": "deepseek-v4-pro"
+ },
+ {
+  "a": "CLI.C.567796523",
+  "cond": "盲二审",
+  "out": 3081.74,
+  "raw": "F 3081.74",
+  "model": "deepseek-v4-pro"
+ },
+ {
+  "a": "CLI.C.568406913",
+  "cond": "盲二审",
+  "out": 0.0,
+  "raw": "F 0",
+  "model": "deepseek-v4-pro"
+ },
+ {
+  "a": "CLI.C.568133276",
+  "cond": "盲二审",
+  "out": 87189.79,
+  "raw": "F 87189.79",
+  "model": "deepseek-v4-pro"
+ },
+ {
+  "a": "CLI.C.568727232",
+  "cond": "盲二审",
+  "out": 118438.34,
+  "raw": "F 118438.34",
+  "model": "deepseek-v4-pro"
+ },
+ {
+  "a": "CLI.C.576109270",
+  "cond": "盲二审",
+  "out": 0.0,
+  "raw": "T 0",
+  "model": "deepseek-v4-pro"
+ },
+ {
+  "a": "CLI.C.576423655",
+  "cond": "盲二审",
+  "out": 0.0,
+  "raw": "F 0",
+  "model": "deepseek-v4-pro"
+ },
+ {
+  "a": "CLI.C.574105461",
+  "cond": "盲二审",
+  "out": 1530.31,
+  "raw": "F 1530.31",
+  "model": "deepseek-v4-pro"
+ },
+ {
+  "a": "CLI.C.573551757",
+  "cond": "盲二审",
+  "out": 266658.0,
+  "raw": "F 266658",
+  "model": "deepseek-v4-pro"
+ },
+ {
+  "a": "CLI.C.568689026",
+  "cond": "盲二审",
+  "out": 0.0,
+  "raw": "T 0",
+  "model": "deepseek-v4-pro"
+ },
+ {
+  "a": "CLI.C.568751011",
+  "cond": "盲二审",
+  "out": 5002.02,
+  "raw": "F 5002.02",
+  "model": "deepseek-v4-pro"
+ },
+ {
+  "a": "CLI.C.568689199",
+  "cond": "盲二审",
+  "out": 4379.89,
+  "raw": "F 4379.89",
+  "model": "deepseek-v4-pro"
+ },
+ {
+  "a": "CLI.C.568819309",
+  "cond": "盲二审",
+  "out": 0.0,
+  "raw": "F 0",
+  "model": "deepseek-v4-pro"
+ },
+ {
+  "a": "CLI.C.568895964",
+  "cond": "盲二审",
+  "out": 203357.21,
+  "raw": "F 203357.21",
+  "model": "deepseek-v4-pro"
+ },
+ {
+  "a": "CLI.C.568896011",
+  "cond": "盲二审",
+  "out": 19298.57,
+  "raw": "F 19298.57",
+  "model": "deepseek-v4-pro"
+ },
+ {
+  "a": "CLI.C.568995918",
+  "cond": "盲二审",
+  "out": 0.0,
+  "raw": "F 0",
+  "model": "deepseek-v4-pro"
+ },
+ {
+  "a": "CLI.C.569048859",
+  "cond": "盲二审",
+  "out": 0.0,
+  "raw": "F 0",
+  "model": "deepseek-v4-pro"
+ },
+ {
+  "a": "CLI.C.569095664",
+  "cond": "盲二审",
+  "out": 13283.46,
+  "raw": "F 13283.46",
+  "model": "deepseek-v4-pro"
+ },
+ {
+  "a": "CLI.C.569167212",
+  "cond": "盲二审",
+  "out": 22296.07,
+  "raw": "F 22296.07",
+  "model": "deepseek-v4-pro"
+ },
+ {
+  "a": "CLI.C.569522173",
+  "cond": "盲二审",
+  "out": 0.0,
+  "raw": "F 0",
+  "model": "deepseek-v4-pro"
+ },
+ {
+  "a": "CLI.C.569283233",
+  "cond": "盲二审",
+  "out": 41424.02,
+  "raw": "F 41424.02",
+  "model": "deepseek-v4-pro"
+ },
+ {
+  "a": "CLI.C.569644651",
+  "cond": "盲二审",
+  "out": 202832.47,
+  "raw": "F 202832.47",
+  "model": "deepseek-v4-pro"
+ },
+ {
+  "a": "CLI.C.568924702",
+  "cond": "盲二审",
+  "out": 1956.2,
+  "raw": "F 1956.20",
+  "model": "deepseek-v4-pro"
+ },
+ {
+  "a": "CLI.C.569836015",
+  "cond": "盲二审",
+  "out": 0.0,
+  "raw": "T 0",
+  "model": "deepseek-v4-pro"
+ },
+ {
+  "a": "CLI.C.572830028",
+  "cond": "盲二审",
+  "out": 0.0,
+  "raw": "F 0",
+  "model": "deepseek-v4-pro"
+ },
+ {
+  "a": "CLI.C.572829611",
+  "cond": "盲二审",
+  "out": 0.0,
+  "raw": "T 0",
+  "model": "deepseek-v4-pro"
+ },
+ {
+  "a": "CLI.C.569675178",
+  "cond": "盲二审",
+  "out": 0.0,
+  "raw": "F 0",
+  "model": "deepseek-v4-pro"
+ },
+ {
+  "a": "CLI.C.572925186",
+  "cond": "盲二审",
+  "out": 31419.86,
+  "raw": "F 31419.86",
+  "model": "deepseek-v4-pro"
+ },
+ {
+  "a": "CLI.C.573028748",
+  "cond": "盲二审",
+  "out": 0.0,
+  "raw": "T 0",
+  "model": "deepseek-v4-pro"
+ },
+ {
+  "a": "CLI.C.573043175",
+  "cond": "盲二审",
+  "out": 0.0,
+  "raw": "T 0",
+  "model": "deepseek-v4-pro"
+ },
+ {
+  "a": "CLI.C.573039608",
+  "cond": "盲二审",
+  "out": 5879.48,
+  "raw": "F 5879.48",
+  "model": "deepseek-v4-pro"
+ },
+ {
+  "a": "CLI.C.573060751",
+  "cond": "盲二审",
+  "out": 0.0,
+  "raw": "F 0",
+  "model": "deepseek-v4-pro"
+ },
+ {
+  "a": "CLI.C.573117038",
+  "cond": "盲二审",
+  "out": 2702.38,
+  "raw": "F 2702.38",
+  "model": "deepseek-v4-pro"
+ },
+ {
+  "a": "CLI.C.573136452",
+  "cond": "盲二审",
+  "out": 0.0,
+  "raw": "T 0",
+  "model": "deepseek-v4-pro"
+ },
+ {
+  "a": "CLI.C.573128296",
+  "cond": "盲二审",
+  "out": 15993.01,
+  "raw": "F 15993.01",
+  "model": "deepseek-v4-pro"
+ },
+ {
+  "a": "CLI.C.573164263",
+  "cond": "盲二审",
+  "out": 2134.34,
+  "raw": "F 2134.34",
+  "model": "deepseek-v4-pro"
+ },
+ {
+  "a": "CLI.C.573317093",
+  "cond": "盲二审",
+  "out": 0.0,
+  "raw": "T 0",
+  "model": "deepseek-v4-pro"
+ },
+ {
+  "a": "CLI.C.573141031",
+  "cond": "盲二审",
+  "out": 24093.03,
+  "raw": "F 24093.03",
+  "model": "deepseek-v4-pro"
+ },
+ {
+  "a": "CLI.C.573307595",
+  "cond": "盲二审",
+  "out": 45957.69,
+  "raw": "F 45957.69",
+  "model": "deepseek-v4-pro"
+ },
+ {
+  "a": "CLI.C.573310503",
+  "cond": "盲二审",
+  "out": 1743.41,
+  "raw": "F 1743.41",
+  "model": "deepseek-v4-pro"
+ },
+ {
+  "a": "CLI.C.573311911",
+  "cond": "盲二审",
+  "out": 0.0,
+  "raw": "F 0",
+  "model": "deepseek-v4-pro"
+ },
+ {
+  "a": "CLI.C.573324838",
+  "cond": "盲二审",
+  "out": 0.0,
+  "raw": "F 0",
+  "model": "deepseek-v4-pro"
+ },
+ {
+  "a": "CLI.C.573344395",
+  "cond": "盲二审",
+  "out": 2472.81,
+  "raw": "F 2472.81",
+  "model": "deepseek-v4-pro"
+ },
+ {
+  "a": "CLI.C.573415981",
+  "cond": "盲二审",
+  "out": 74925.5,
+  "raw": "F 74925.5",
+  "model": "deepseek-v4-pro"
+ },
+ {
+  "a": "CLI.C.573278799",
+  "cond": "盲二审",
+  "out": 22265.77,
+  "raw": "F 22265.77",
+  "model": "deepseek-v4-pro"
+ },
+ {
+  "a": "CLI.C.573488604",
+  "cond": "盲二审",
+  "out": 142276.9,
+  "raw": "F 142276.9",
+  "model": "deepseek-v4-pro"
+ },
+ {
+  "a": "CLI.C.573343634",
+  "cond": "盲二审",
+  "out": 16821.0,
+  "raw": "F 16821",
+  "model": "deepseek-v4-pro"
+ },
+ {
+  "a": "CLI.C.573509232",
+  "cond": "盲二审",
+  "out": 56602.14,
+  "raw": "F 56602.14",
+  "model": "deepseek-v4-pro"
+ },
+ {
+  "a": "CLI.C.573559988",
+  "cond": "盲二审",
+  "out": 127267.51,
+  "raw": "F 127267.51",
+  "model": "deepseek-v4-pro"
+ },
+ {
+  "a": "CLI.C.573420885",
+  "cond": "盲二审",
+  "out": 0.0,
+  "raw": "F 0",
+  "model": "deepseek-v4-pro"
+ },
+ {
+  "a": "CLI.C.573703201",
+  "cond": "盲二审",
+  "out": 505.0,
+  "raw": "F 505",
+  "model": "deepseek-v4-pro"
+ },
+ {
+  "a": "CLI.C.573728971",
+  "cond": "盲二审",
+  "out": 0.0,
+  "raw": "F 0",
+  "model": "deepseek-v4-pro"
+ },
+ {
+  "a": "CLI.C.573446654",
+  "cond": "盲二审",
+  "out": 8293.63,
+  "raw": "F 8293.63",
+  "model": "deepseek-v4-pro"
+ },
+ {
+  "a": "CLI.C.574091188",
+  "cond": "盲二审",
+  "out": 0.0,
+  "raw": "F 0",
+  "model": "deepseek-v4-pro"
+ },
+ {
+  "a": "CLI.C.573913825",
+  "cond": "盲二审",
+  "out": 0.0,
+  "raw": "T 0",
+  "model": "deepseek-v4-pro"
+ },
+ {
+  "a": "CLI.C.574048559",
+  "cond": "盲二审",
+  "out": 20343.52,
+  "raw": "F 20343.52",
+  "model": "deepseek-v4-pro"
+ },
+ {
+  "a": "CLI.C.574009199",
+  "cond": "盲二审",
+  "out": 158480.5,
+  "raw": "F 158480.5",
+  "model": "deepseek-v4-pro"
+ },
+ {
+  "a": "CLI.C.573962523",
+  "cond": "盲二审",
+  "out": 0.0,
+  "raw": "T 0",
+  "model": "deepseek-v4-pro"
+ },
+ {
+  "a": "CLI.C.573564276",
+  "cond": "盲二审",
+  "out": 24119.51,
+  "raw": "F 24119.51",
+  "model": "deepseek-v4-pro"
+ },
+ {
+  "a": "CLI.C.573851029",
+  "cond": "盲二审",
+  "out": 4210.55,
+  "raw": "F 4210.55",
+  "model": "deepseek-v4-pro"
+ },
+ {
+  "a": "CLI.C.574100275",
+  "cond": "盲二审",
+  "out": 13288.87,
+  "raw": "F 13288.87",
+  "model": "deepseek-v4-pro"
+ },
+ {
+  "a": "CLI.C.574140605",
+  "cond": "盲二审",
+  "out": 0.0,
+  "raw": "F 0",
+  "model": "deepseek-v4-pro"
+ },
+ {
+  "a": "CLI.C.574199031",
+  "cond": "盲二审",
+  "out": 3261.71,
+  "raw": "F 3261.71",
+  "model": "deepseek-v4-pro"
+ },
+ {
+  "a": "CLI.C.574129255",
+  "cond": "盲二审",
+  "out": 9321.0,
+  "raw": "F 9321",
+  "model": "deepseek-v4-pro"
+ },
+ {
+  "a": "CLI.C.574329173",
+  "cond": "盲二审",
+  "out": 78.36,
+  "raw": "F 78.36",
+  "model": "deepseek-v4-pro"
+ },
+ {
+  "a": "CLI.C.574390580",
+  "cond": "盲二审",
+  "out": 0.0,
+  "raw": "T 0",
+  "model": "deepseek-v4-pro"
+ },
+ {
+  "a": "CLI.C.573956345",
+  "cond": "盲二审",
+  "out": 12339.97,
+  "raw": "F 12339.97",
+  "model": "deepseek-v4-pro"
+ },
+ {
+  "a": "CLI.C.574332938",
+  "cond": "盲二审",
+  "out": 22510.44,
+  "raw": "F 22510.44",
+  "model": "deepseek-v4-pro"
+ },
+ {
+  "a": "CLI.C.574336159",
+  "cond": "盲二审",
+  "out": 12803.57,
+  "raw": "F 12803.57",
+  "model": "deepseek-v4-pro"
+ },
+ {
+  "a": "CLI.C.574386373",
+  "cond": "盲二审",
+  "out": 0.0,
+  "raw": "F 0",
+  "model": "deepseek-v4-pro"
+ },
+ {
+  "a": "CLI.C.574499469",
+  "cond": "盲二审",
+  "out": 0.0,
+  "raw": "T 0",
+  "model": "deepseek-v4-pro"
+ },
+ {
+  "a": "CLI.C.574425575",
+  "cond": "盲二审",
+  "out": 511.68,
+  "raw": "F 511.68",
+  "model": "deepseek-v4-pro"
+ },
+ {
+  "a": "CLI.C.574529087",
+  "cond": "盲二审",
+  "out": 3483.53,
+  "raw": "F 3483.53",
+  "model": "deepseek-v4-pro"
+ },
+ {
+  "a": "CLI.C.574524597",
+  "cond": "盲二审",
+  "out": 8077.97,
+  "raw": "F 8077.97",
+  "model": "deepseek-v4-pro"
+ },
+ {
+  "a": "CLI.C.574539050",
+  "cond": "盲二审",
+  "out": 0.0,
+  "raw": "F 0",
+  "model": "deepseek-v4-pro"
+ },
+ {
+  "a": "CLI.C.574679049",
+  "cond": "盲二审",
+  "out": 44902.5,
+  "raw": "F 44902.5",
+  "model": "deepseek-v4-pro"
+ },
+ {
+  "a": "CLI.C.574663029",
+  "cond": "盲二审",
+  "out": 29294.6,
+  "raw": "F 29294.60",
+  "model": "deepseek-v4-pro"
+ },
+ {
+  "a": "CLI.C.574683165",
+  "cond": "盲二审",
+  "out": 0.0,
+  "raw": "F 0",
+  "model": "deepseek-v4-pro"
+ },
+ {
+  "a": "CLI.C.574652794",
+  "cond": "盲二审",
+  "out": 4281.3,
+  "raw": "F 4281.3",
+  "model": "deepseek-v4-pro"
+ },
+ {
+  "a": "CLI.C.574750800",
+  "cond": "盲二审",
+  "out": 0.0,
+  "raw": "T 0",
+  "model": "deepseek-v4-pro"
+ },
+ {
+  "a": "CLI.C.574765904",
+  "cond": "盲二审",
+  "out": 0.0,
+  "raw": "T 0",
+  "model": "deepseek-v4-pro"
+ },
+ {
+  "a": "CLI.C.574760709",
+  "cond": "盲二审",
+  "out": 0.0,
+  "raw": "F 0",
+  "model": "deepseek-v4-pro"
+ },
+ {
+  "a": "CLI.C.574899561",
+  "cond": "盲二审",
+  "out": 65812.31,
+  "raw": "F 65812.31",
+  "model": "deepseek-v4-pro"
+ },
+ {
+  "a": "CLI.C.574753575",
+  "cond": "盲二审",
+  "out": 0.0,
+  "raw": "T 0",
+  "model": "deepseek-v4-pro"
+ },
+ {
+  "a": "CLI.C.574815430",
+  "cond": "盲二审",
+  "out": 33022.91,
+  "raw": "F 33022.91",
+  "model": "deepseek-v4-pro"
+ },
+ {
+  "a": "CLI.C.574917609",
+  "cond": "盲二审",
+  "out": 0.0,
+  "raw": "F 0",
+  "model": "deepseek-v4-pro"
+ },
+ {
+  "a": "CLI.C.574839658",
+  "cond": "盲二审",
+  "out": 52441.17,
+  "raw": "F 52441.17",
+  "model": "deepseek-v4-pro"
+ },
+ {
+  "a": "CLI.C.574941002",
+  "cond": "盲二审",
+  "out": 0.0,
+  "raw": "F 0",
+  "model": "deepseek-v4-pro"
+ },
+ {
+  "a": "CLI.C.574943005",
+  "cond": "盲二审",
+  "out": 0.0,
+  "raw": "T 0",
+  "model": "deepseek-v4-pro"
+ },
+ {
+  "a": "CLI.C.575029422",
+  "cond": "盲二审",
+  "out": 0.0,
+  "raw": "F 0",
+  "model": "deepseek-v4-pro"
+ },
+ {
+  "a": "CLI.C.575062848",
+  "cond": "盲二审",
+  "out": 10500.0,
+  "raw": "F 10500",
+  "model": "deepseek-v4-pro"
+ },
+ {
+  "a": "CLI.C.574975437",
+  "cond": "盲二审",
+  "out": 386398.44,
+  "raw": "F 386398.44",
+  "model": "deepseek-v4-pro"
+ },
+ {
+  "a": "CLI.C.574652736",
+  "cond": "盲二审",
+  "out": 0.0,
+  "raw": "F 0",
+  "model": "deepseek-v4-pro"
+ },
+ {
+  "a": "CLI.C.575120030",
+  "cond": "盲二审",
+  "out": 0.0,
+  "raw": "F 0",
+  "model": "deepseek-v4-pro"
+ },
+ {
+  "a": "CLI.C.575054348",
+  "cond": "盲二审",
+  "out": 0.0,
+  "raw": "F 0",
+  "model": "deepseek-v4-pro"
+ },
+ {
+  "a": "CLI.C.575196505",
+  "cond": "盲二审",
+  "out": 24453.79,
+  "raw": "F 24453.79",
+  "model": "deepseek-v4-pro"
+ },
+ {
+  "a": "CLI.C.575581294",
+  "cond": "盲二审",
+  "out": 159267.89,
+  "raw": "F 159267.89",
+  "model": "deepseek-v4-pro"
+ },
+ {
+  "a": "CLI.C.575157251",
+  "cond": "盲二审",
+  "out": 0.0,
+  "raw": "F 0",
+  "model": "deepseek-v4-pro"
+ },
+ {
+  "a": "CLI.C.575669048",
+  "cond": "盲二审",
+  "out": 0.0,
+  "raw": "T 0",
+  "model": "deepseek-v4-pro"
+ },
+ {
+  "a": "CLI.C.575208803",
+  "cond": "盲二审",
+  "out": 56540.0,
+  "raw": "F 56540",
+  "model": "deepseek-v4-pro"
+ },
+ {
+  "a": "CLI.C.575572296",
+  "cond": "盲二审",
+  "out": 3963.53,
+  "raw": "F 3963.53",
+  "model": "deepseek-v4-pro"
+ },
+ {
+  "a": "CLI.C.575714016",
+  "cond": "盲二审",
+  "out": 0.0,
+  "raw": "F 0",
+  "model": "deepseek-v4-pro"
+ },
+ {
+  "a": "CLI.C.575649455",
+  "cond": "盲二审",
+  "out": 4401.76,
+  "raw": "F 4401.76",
+  "model": "deepseek-v4-pro"
+ },
+ {
+  "a": "CLI.C.575749155",
+  "cond": "盲二审",
+  "out": 42868.0,
+  "raw": "F 42868",
+  "model": "deepseek-v4-pro"
+ },
+ {
+  "a": "CLI.C.575762744",
+  "cond": "盲二审",
+  "out": 0.0,
+  "raw": "F 0",
+  "model": "deepseek-v4-pro"
+ },
+ {
+  "a": "CLI.C.575781284",
+  "cond": "盲二审",
+  "out": 541.9,
+  "raw": "F 541.9",
+  "model": "deepseek-v4-pro"
+ },
+ {
+  "a": "CLI.C.575885241",
+  "cond": "盲二审",
+  "out": 0.0,
+  "raw": "F 0",
+  "model": "deepseek-v4-pro"
+ },
+ {
+  "a": "CLI.C.575839680",
+  "cond": "盲二审",
+  "out": 39174.15,
+  "raw": "F 39174.15",
+  "model": "deepseek-v4-pro"
+ },
+ {
+  "a": "CLI.C.575986878",
+  "cond": "盲二审",
+  "out": 1768.9,
+  "raw": "F 1768.9",
+  "model": "deepseek-v4-pro"
+ },
+ {
+  "a": "CLI.C.575789189",
+  "cond": "盲二审",
+  "out": 15039.88,
+  "raw": "F 15039.88",
+  "model": "deepseek-v4-pro"
+ },
+ {
+  "a": "CLI.C.575835292",
+  "cond": "盲二审",
+  "out": 0.0,
+  "raw": "F 0",
+  "model": "deepseek-v4-pro"
+ },
+ {
+  "a": "CLI.C.575565221",
+  "cond": "盲二审",
+  "out": 140.0,
+  "raw": "F 140",
+  "model": "deepseek-v4-pro"
+ },
+ {
+  "a": "CLI.C.576034559",
+  "cond": "盲二审",
+  "out": 0.0,
+  "raw": "F 0",
+  "model": "deepseek-v4-pro"
+ },
+ {
+  "a": "CLI.C.576050514",
+  "cond": "盲二审",
+  "out": 24800.34,
+  "raw": "F 24800.34",
+  "model": "deepseek-v4-pro"
+ },
+ {
+  "a": "CLI.C.575827473",
+  "cond": "盲二审",
+  "out": 62011.76,
+  "raw": "F 62011.76",
+  "model": "deepseek-v4-pro"
+ },
+ {
+  "a": "CLI.C.576245505",
+  "cond": "盲二审",
+  "out": 0.0,
+  "raw": "T 0",
+  "model": "deepseek-v4-pro"
+ },
+ {
+  "a": "CLI.C.576179118",
+  "cond": "盲二审",
+  "out": 0.0,
+  "raw": "F 0",
+  "model": "deepseek-v4-pro"
+ },
+ {
+  "a": "CLI.C.576086348",
+  "cond": "盲二审",
+  "out": 24216.0,
+  "raw": "F 24216",
+  "model": "deepseek-v4-pro"
+ },
+ {
+  "a": "CLI.C.576292135",
+  "cond": "盲二审",
+  "out": 0.0,
+  "raw": "T 0",
+  "model": "deepseek-v4-pro"
+ },
+ {
+  "a": "CLI.C.576337662",
+  "cond": "盲二审",
+  "out": 10729.02,
+  "raw": "F 10729.02",
+  "model": "deepseek-v4-pro"
+ },
+ {
+  "a": "CLI.C.576317128",
+  "cond": "盲二审",
+  "out": 89886.4,
+  "raw": "F 89886.4",
+  "model": "deepseek-v4-pro"
+ },
+ {
+  "a": "CLI.C.576319996",
+  "cond": "盲二审",
+  "out": 0.0,
+  "raw": "F 0",
+  "model": "deepseek-v4-pro"
+ },
+ {
+  "a": "CLI.C.576330621",
+  "cond": "盲二审",
+  "out": 0.0,
+  "raw": "T 0",
+  "model": "deepseek-v4-pro"
+ },
+ {
+  "a": "CLI.C.576362947",
+  "cond": "盲二审",
+  "out": 218700.86,
+  "raw": "F 218700.86",
+  "model": "deepseek-v4-pro"
+ },
+ {
+  "a": "CLI.C.576363038",
+  "cond": "盲二审",
+  "out": 221598.5,
+  "raw": "F 221598.5",
+  "model": "deepseek-v4-pro"
+ },
+ {
+  "a": "CLI.C.576385569",
+  "cond": "盲二审",
+  "out": 30558.29,
+  "raw": "F 30558.29",
+  "model": "deepseek-v4-pro"
+ },
+ {
+  "a": "CLI.C.576364008",
+  "cond": "盲二审",
+  "out": 0.0,
+  "raw": "T 0",
+  "model": "deepseek-v4-pro"
+ },
+ {
+  "a": "CLI.C.576427534",
+  "cond": "盲二审",
+  "out": 117882.78,
+  "raw": "F 117882.78",
+  "model": "deepseek-v4-pro"
+ },
+ {
+  "a": "CLI.C.576512520",
+  "cond": "盲二审",
+  "out": 6327.21,
+  "raw": "F 6327.21",
+  "model": "deepseek-v4-pro"
+ },
+ {
+  "a": "CLI.C.576524541",
+  "cond": "盲二审",
+  "out": 4076.25,
+  "raw": "F 4076.25",
+  "model": "deepseek-v4-pro"
+ },
+ {
+  "a": "CLI.C.576548597",
+  "cond": "盲二审",
+  "out": 82597.64,
+  "raw": "F 82597.64",
+  "model": "deepseek-v4-pro"
+ }
+]

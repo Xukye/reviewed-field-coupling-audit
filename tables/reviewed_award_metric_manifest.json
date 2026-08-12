@@ -1,0 +1,20 @@
+{
+  "stress_set_n": 165,
+  "stress_set_exact_maintain": 105,
+  "stress_set_exact_modified": 60,
+  "positive_displayed_award_frame_n": 149,
+  "positive_displayed_award_frame_exact_maintain": 92,
+  "positive_displayed_award_frame_exact_modified": 57,
+  "modified_first_positive": 57,
+  "modified_second_positive": 58,
+  "modified_both_positive": 55,
+  "prevalence_standardization_weights": {
+    "award_maintain": 0.8874538745387454,
+    "award_change": 0.11254612546125461
+  },
+  "legacy_calibration_A_weights": {
+    "affirm": 0.8874538745387454,
+    "modified": 0.11254612546125461
+  },
+  "tolerance": "relative ±5%; zero target or zero anchor requires exact zero"
+}

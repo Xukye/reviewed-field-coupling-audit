@@ -1,0 +1,8 @@
+paper_model_name,raw_anchor_file,raw_blind_file,provider_setting_note
+Gemini-2.5,anchor_all_gemini25flash.json,blind2_gemini25flash.json,deterministic-intent; temperature 0 where exposed by provider API
+GLM-5.1,anchor_all_glm51.json,blind2_glm51.json,deterministic-intent; temperature 0 where exposed by provider API
+DeepSeek-v4-pro,anchor_all_dsv4pro.json,blind2_dsv4pro.json,deterministic-intent; temperature 0 where exposed by provider API
+Qwen3.7-plus,anchor_all_qwen37plus.json,blind2_qwen37plus.json,deterministic-intent; temperature 0 where exposed by provider API
+MiMo,anchor_all_mimo25pro.json,blind2_mimo25pro_tf.json,deterministic-intent; temperature 0 where exposed by provider API
+Grok-4.3,anchor_all_grok43.json,blind2_grok43.json,deterministic-intent; temperature 0 where exposed by provider API
+DeepSeek-Flash,anchor_all_flash.json,blind2_flash_tf.json,deterministic-intent; temperature 0 where exposed by provider API
