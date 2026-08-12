@@ -10,7 +10,7 @@ The frozen model-run set. It consists of a random seed-42 draw plus award-change
 
 ## 149 positive displayed-award frame
 
-The main model-analysis frame. It includes stress-set cases with positive first-instance awards, so pseudo-anchor multiplication and relative-copy measures are well-defined. It contains 92 exact award-maintain cases and 57 exact award-change cases.
+The non-zero displayed-award frame. It includes stress-set cases with positive first-instance awards, so pseudo-anchor multiplication and relative-copy measures are well-defined. It contains 92 exact award-maintain cases and 57 exact award-change cases.
 
 ## 57 modified first-positive cases
 
