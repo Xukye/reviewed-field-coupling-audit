@@ -23,13 +23,13 @@ FALSE_CONDS = ["真扰动x1/3", "真扰动x2/3", "真扰动x3/2", "真扰动x3"]
 TOLERANCES = [0.01, 0.05, 0.10]
 
 MODELS = [
-    ("Gemini-2.5", "anchor_all_gemini25flash.json", "blind2_gemini25flash.json", "non-copier"),
-    ("GLM-5.1", "anchor_all_glm51.json", "blind2_glm51.json", "non-copier"),
-    ("DeepSeek-v4-pro", "anchor_all_dsv4pro.json", "blind2_dsv4pro.json", "partial"),
-    ("Qwen3.7-plus", "anchor_all_qwen37plus.json", "blind2_qwen37plus.json", "copier"),
-    ("MiMo", "anchor_all_mimo25pro.json", "blind2_mimo25pro_tf.json", "copier"),
-    ("Grok-4.3", "anchor_all_grok43.json", "blind2_grok43.json", "copier"),
-    ("DeepSeek-Flash", "anchor_all_flash.json", "blind2_flash_tf.json", "copier"),
+    ("Gemini-2.5", "anchor_all_gemini25flash.json", "blind2_gemini25flash.json", None, "non-copier"),
+    ("GLM-5.1", "anchor_all_glm51.json", "blind2_glm51.json", None, "non-copier"),
+    ("DeepSeek-v4-pro", "anchor_all_dsv4pro.json", "blind2_dsv4pro.json", "anchor_zero_dsv4pro.json", "partial"),
+    ("Qwen3.7-plus", "anchor_all_qwen37plus.json", "blind2_qwen37plus.json", "anchor_zero_qwen37plus.json", "copier"),
+    ("MiMo", "anchor_all_mimo25pro.json", "blind2_mimo25pro_tf.json", "anchor_zero_mimo25pro.json", "copier"),
+    ("Grok-4.3", "anchor_all_grok43.json", "blind2_grok43.json", "anchor_zero_grok43.json", "copier"),
+    ("DeepSeek-Flash", "anchor_all_flash.json", "blind2_flash_tf.json", None, "copier"),
 ]
 
 
@@ -91,9 +91,14 @@ def load_truth() -> dict[str, dict[str, object]]:
     }
 
 
-def load_anchor(filename: str) -> tuple[dict[str, float], list[dict[str, object]]]:
+def load_anchor(filename: str, zero_filename: str | None = None) -> tuple[dict[str, float], list[dict[str, object]]]:
     rows = json.loads((RESULT_DIR / filename).read_text(encoding="utf-8"))
     x1 = {row["a"]: num(row.get("out")) for row in rows if row.get("cond") == "真锚x1"}
+    if zero_filename:
+        zero_rows = json.loads((RESULT_DIR / zero_filename).read_text(encoding="utf-8"))
+        for row in zero_rows:
+            if str(row.get("cond", "")).startswith("真锚x1"):
+                x1[row["a"]] = num(row.get("out"))
     return {case_id: value for case_id, value in x1.items() if value is not None}, rows
 
 
@@ -104,6 +109,9 @@ def load_blind(filename: str) -> dict[str, float]:
 
 def main() -> None:
     truth = load_truth()
+    all_cases = list(truth)
+    all_affirm_cases = [case_id for case_id in all_cases if truth[case_id]["label"] == "维持"]
+    all_modified_cases = [case_id for case_id in all_cases if truth[case_id]["label"] == "改判"]
     positive_cases = [case_id for case_id, row in truth.items() if row["first"] > 0]
     affirm_cases = [case_id for case_id in positive_cases if truth[case_id]["label"] == "维持"]
     modified_cases = [case_id for case_id in positive_cases if truth[case_id]["label"] == "改判"]
@@ -119,11 +127,11 @@ def main() -> None:
 
     true_counts = []
     for tol in TOLERANCES:
-        true_counts.append(sum(within(truth[c]["second"], truth[c]["first"], tol) for c in positive_cases))
+        true_counts.append(sum(within(truth[c]["second"], truth[c]["first"], tol) for c in all_cases))
     tolerance_rows.append(
         {
             "source_model": "True awards",
-            "n": len(positive_cases),
+            "n": len(all_cases),
             "pct1_count": true_counts[0],
             "pct5_count": true_counts[1],
             "pct10_count": true_counts[2],
@@ -132,21 +140,25 @@ def main() -> None:
         }
     )
 
-    for model, anchor_file, blind_file, model_type in MODELS:
-        x1, anchor_rows = load_anchor(anchor_file)
+    for model, anchor_file, blind_file, zero_anchor_file, model_type in MODELS:
+        x1, anchor_rows = load_anchor(anchor_file, zero_anchor_file)
         blind = load_blind(blind_file)
 
-        blind_aff = sum(within(blind.get(c), truth[c]["second"]) for c in affirm_cases)
-        blind_mod = sum(within(blind.get(c), truth[c]["second"]) for c in modified_cases)
-        anchor_aff = sum(within(x1.get(c), truth[c]["second"]) for c in affirm_cases)
-        anchor_mod = sum(within(x1.get(c), truth[c]["second"]) for c in modified_cases)
-        maintain_aff = sum(within(x1.get(c), truth[c]["first"]) for c in affirm_cases)
-        maintain_mod = sum(within(x1.get(c), truth[c]["first"]) for c in modified_cases)
+        blind_aff = sum(within(blind.get(c), truth[c]["second"]) for c in all_affirm_cases)
+        blind_mod = sum(within(blind.get(c), truth[c]["second"]) for c in all_modified_cases)
+        anchor_aff = sum(within(x1.get(c), truth[c]["second"]) for c in all_affirm_cases)
+        anchor_mod = sum(within(x1.get(c), truth[c]["second"]) for c in all_modified_cases)
+        maintain_aff = sum(within(x1.get(c), truth[c]["first"]) for c in all_affirm_cases)
+        maintain_mod = sum(within(x1.get(c), truth[c]["first"]) for c in all_modified_cases)
+        blind_aff_pos = sum(within(blind.get(c), truth[c]["second"]) for c in affirm_cases)
+        blind_mod_pos = sum(within(blind.get(c), truth[c]["second"]) for c in modified_cases)
+        anchor_aff_pos = sum(within(x1.get(c), truth[c]["second"]) for c in affirm_cases)
+        anchor_mod_pos = sum(within(x1.get(c), truth[c]["second"]) for c in modified_cases)
 
-        binary_num = maintain_aff + (len(modified_cases) - maintain_mod)
+        binary_num = maintain_aff + (len(all_modified_cases) - maintain_mod)
         binary_cal = 100.0 * (
-            W_MAINTAIN * maintain_aff / len(affirm_cases)
-            + W_MODIFIED * (len(modified_cases) - maintain_mod) / len(modified_cases)
+            W_MAINTAIN * maintain_aff / len(all_affirm_cases)
+            + W_MODIFIED * (len(all_modified_cases) - maintain_mod) / len(all_modified_cases)
         )
 
         copy_aff = copy_mod = copy_aff_den = copy_mod_den = 0
@@ -219,38 +231,38 @@ def main() -> None:
         summary_rows.append(
             {
                 "model": model,
-                "positive_n": len(positive_cases),
-                "affirm_n": len(affirm_cases),
-                "modified_n": len(modified_cases),
+                "positive_n": len(all_cases),
+                "affirm_n": len(all_affirm_cases),
+                "modified_n": len(all_modified_cases),
                 "copy_calib_pct": round(copy_cal, 1),
                 "blind_hit_n": blind_aff + blind_mod,
-                "blind_hit_raw_pct": round(raw_pct(blind_aff + blind_mod, len(positive_cases)), 1),
-                "blind_hit_calib_pct": round(cal_pct(blind_aff, len(affirm_cases), blind_mod, len(modified_cases)), 1),
+                "blind_hit_raw_pct": round(raw_pct(blind_aff + blind_mod, len(all_cases)), 1),
+                "blind_hit_calib_pct": round(cal_pct(blind_aff, len(all_affirm_cases), blind_mod, len(all_modified_cases)), 1),
                 "true_anchor_hit_n": anchor_aff + anchor_mod,
-                "true_anchor_hit_raw_pct": round(raw_pct(anchor_aff + anchor_mod, len(positive_cases)), 1),
-                "true_anchor_hit_calib_pct": round(cal_pct(anchor_aff, len(affirm_cases), anchor_mod, len(modified_cases)), 1),
+                "true_anchor_hit_raw_pct": round(raw_pct(anchor_aff + anchor_mod, len(all_cases)), 1),
+                "true_anchor_hit_calib_pct": round(cal_pct(anchor_aff, len(all_affirm_cases), anchor_mod, len(all_modified_cases)), 1),
                 "binary_correct_n": binary_num,
-                "binary_raw_pct": round(raw_pct(binary_num, len(positive_cases)), 1),
+                "binary_raw_pct": round(raw_pct(binary_num, len(all_cases)), 1),
                 "binary_calib_pct": round(binary_cal, 1),
                 "type": model_type,
             }
         )
 
-        table = [[maintain_aff, len(affirm_cases) - maintain_aff], [maintain_mod, len(modified_cases) - maintain_mod]]
+        table = [[maintain_aff, len(all_affirm_cases) - maintain_aff], [maintain_mod, len(all_modified_cases) - maintain_mod]]
         chi2, chi_p, _, _ = stats.chi2_contingency(table, correction=False)
         fisher_p = stats.fisher_exact(table)[1]
-        phi = math.sqrt(chi2 / len(positive_cases))
+        phi = math.sqrt(chi2 / len(all_cases))
         bal_acc = 50.0 * (
-            maintain_aff / len(affirm_cases) + (len(modified_cases) - maintain_mod) / len(modified_cases)
+            maintain_aff / len(all_affirm_cases) + (len(all_modified_cases) - maintain_mod) / len(all_modified_cases)
         )
         discrim_rows.append(
             {
                 "model": model,
                 "maintain_true_maintain_n": maintain_aff,
-                "true_maintain_n": len(affirm_cases),
+                "true_maintain_n": len(all_affirm_cases),
                 "maintain_true_modified_n": maintain_mod,
-                "true_modified_n": len(modified_cases),
-                "gap_pct": round(100.0 * (maintain_aff / len(affirm_cases) - maintain_mod / len(modified_cases)), 1),
+                "true_modified_n": len(all_modified_cases),
+                "gap_pct": round(100.0 * (maintain_aff / len(all_affirm_cases) - maintain_mod / len(all_modified_cases)), 1),
                 "chi2_p": round(chi_p, 3),
                 "fisher_p": round(fisher_p, 3),
                 "phi": round(phi, 3),
@@ -259,7 +271,7 @@ def main() -> None:
         )
 
         stick_hit = stick_miss = depart_hit = depart_miss = 0
-        for case_id in modified_cases:
+        for case_id in all_modified_cases:
             sticks_to_first = within(x1.get(case_id), truth[case_id]["first"])
             hits_second = within(x1.get(case_id), truth[case_id]["second"])
             if sticks_to_first and hits_second:
@@ -274,11 +286,11 @@ def main() -> None:
         reversal_rows.append(
             {
                 "model": model,
-                "modified_positive_n": len(modified_cases),
+                "modified_positive_n": len(all_modified_cases),
                 "stick_n": maintain_mod,
-                "stick_pct": round(raw_pct(maintain_mod, len(modified_cases)), 1),
+                "stick_pct": round(raw_pct(maintain_mod, len(all_modified_cases)), 1),
                 "hit_second_n": anchor_mod,
-                "hit_second_pct": round(raw_pct(anchor_mod, len(modified_cases)), 1),
+                "hit_second_pct": round(raw_pct(anchor_mod, len(all_modified_cases)), 1),
                 "stick_hit_n": stick_hit,
                 "stick_miss_n": stick_miss,
                 "depart_hit_n": depart_hit,
@@ -289,11 +301,11 @@ def main() -> None:
 
         counts = []
         for tol in TOLERANCES:
-            counts.append(sum(within(x1.get(c), truth[c]["first"], tol) for c in positive_cases))
+            counts.append(sum(within(x1.get(c), truth[c]["first"], tol) for c in all_cases))
         tolerance_rows.append(
             {
                 "source_model": model,
-                "n": len(positive_cases),
+                "n": len(all_cases),
                 "pct1_count": counts[0],
                 "pct5_count": counts[1],
                 "pct10_count": counts[2],
@@ -305,13 +317,13 @@ def main() -> None:
         false_anchor_rows.append(
             {
                 "model": model,
-                "blind_hit_calib_pct": round(cal_pct(blind_aff, len(affirm_cases), blind_mod, len(modified_cases)), 1),
-                "true_anchor_hit_calib_pct": round(cal_pct(anchor_aff, len(affirm_cases), anchor_mod, len(modified_cases)), 1),
+                "blind_hit_calib_pct": round(cal_pct(blind_aff_pos, len(affirm_cases), blind_mod_pos, len(modified_cases)), 1),
+                "true_anchor_hit_calib_pct": round(cal_pct(anchor_aff_pos, len(affirm_cases), anchor_mod_pos, len(modified_cases)), 1),
                 "pseudo_anchor_copy_calib_pct": round(copy_cal, 1),
                 "escape_and_hit_calib_pct": round(escape_cal, 1),
             }
         )
-        blind_cal = cal_pct(blind_aff, len(affirm_cases), blind_mod, len(modified_cases))
+        blind_cal = cal_pct(blind_aff, len(all_affirm_cases), blind_mod, len(all_modified_cases))
         if blind_cal >= 10 and bal_acc >= 60 and fisher_p < 0.05 and phi >= 0.20:
             ability_profile = "demonstrated"
         elif bal_acc >= 55 or blind_cal >= 8:
@@ -374,14 +386,14 @@ def main() -> None:
             }
         )
 
-    always_first_hit = sum(within(truth[c]["first"], truth[c]["second"]) for c in positive_cases)
-    always_first_hit_mod = sum(within(truth[c]["first"], truth[c]["second"]) for c in modified_cases)
+    always_first_hit = sum(within(truth[c]["first"], truth[c]["second"]) for c in all_cases)
+    always_first_hit_mod = sum(within(truth[c]["first"], truth[c]["second"]) for c in all_modified_cases)
     summary_rows.append(
         {
             "model": "always-maintain",
-            "positive_n": len(positive_cases),
-            "affirm_n": len(affirm_cases),
-            "modified_n": len(modified_cases),
+            "positive_n": len(all_cases),
+            "affirm_n": len(all_affirm_cases),
+            "modified_n": len(all_modified_cases),
             "copy_calib_pct": "",
             "blind_hit_n": "",
             "blind_hit_raw_pct": "",
@@ -389,8 +401,8 @@ def main() -> None:
             "true_anchor_hit_n": "",
             "true_anchor_hit_raw_pct": "",
             "true_anchor_hit_calib_pct": "",
-            "binary_correct_n": len(affirm_cases),
-            "binary_raw_pct": round(raw_pct(len(affirm_cases), len(positive_cases)), 1),
+            "binary_correct_n": len(all_affirm_cases),
+            "binary_raw_pct": round(raw_pct(len(all_affirm_cases), len(all_cases)), 1),
             "binary_calib_pct": round(100.0 * W_MAINTAIN, 2),
             "type": "class-prior warning",
         }
@@ -398,20 +410,20 @@ def main() -> None:
     summary_rows.append(
         {
             "model": "always-first",
-            "positive_n": len(positive_cases),
-            "affirm_n": len(affirm_cases),
-            "modified_n": len(modified_cases),
+            "positive_n": len(all_cases),
+            "affirm_n": len(all_affirm_cases),
+            "modified_n": len(all_modified_cases),
             "copy_calib_pct": "",
             "blind_hit_n": "",
             "blind_hit_raw_pct": "",
             "blind_hit_calib_pct": "",
             "true_anchor_hit_n": always_first_hit,
-            "true_anchor_hit_raw_pct": round(raw_pct(always_first_hit, len(positive_cases)), 1),
+            "true_anchor_hit_raw_pct": round(raw_pct(always_first_hit, len(all_cases)), 1),
             "true_anchor_hit_calib_pct": round(
-                100.0 * (W_MAINTAIN + W_MODIFIED * always_first_hit_mod / len(modified_cases)), 2
+                100.0 * (W_MAINTAIN + W_MODIFIED * always_first_hit_mod / len(all_modified_cases)), 2
             ),
-            "binary_correct_n": len(affirm_cases),
-            "binary_raw_pct": round(raw_pct(len(affirm_cases), len(positive_cases)), 1),
+            "binary_correct_n": len(all_affirm_cases),
+            "binary_raw_pct": round(raw_pct(len(all_affirm_cases), len(all_cases)), 1),
             "binary_calib_pct": round(100.0 * W_MAINTAIN, 2),
             "type": "coupling anti-example",
         }
