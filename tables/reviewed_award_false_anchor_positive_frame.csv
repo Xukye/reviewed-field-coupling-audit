@@ -1,8 +1,8 @@
 model,blind_hit_calib_pct,true_anchor_hit_calib_pct,pseudo_anchor_copy_calib_pct,escape_and_hit_calib_pct
 Gemini-2.5,7.0,28.8,19.5,6.4
 GLM-5.1,8.9,28.4,26.1,7.0
-DeepSeek-v4-pro,9.1,52.3,50.0,2.3
-Qwen3.7-plus,7.9,69.7,62.8,2.8
+DeepSeek-v4-pro,9.1,54.2,51.4,2.3
+Qwen3.7-plus,7.9,71.6,62.8,2.8
 MiMo,5.2,77.4,72.8,2.4
-Grok-4.3,3.1,65.8,82.5,1.2
+Grok-4.3,3.1,69.7,82.8,1.2
 DeepSeek-Flash,2.1,83.2,86.1,1.0

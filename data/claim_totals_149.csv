@@ -1,0 +1,150 @@
+case_ref,claim_final,claim_max,open_ended,extraction,note
+CLI.C.565931868,25815.00,25815.00,False,rule (checked),
+CLI.C.569104875,29812.53,29812.53,False,rule (checked),
+CLI.C.573182705,17933.00,17933.00,False,rule (checked),
+CLI.C.573309786,18712.27,18712.27,False,rule (checked),
+CLI.C.573346800,12985.00,12985.00,False,rule (checked),
+CLI.C.573414919,17742.30,17742.30,False,rule (checked),
+CLI.C.573551757,266658.00,266658.00,False,manual,amended from 10000
+CLI.C.573727328,41994.87,41994.87,False,rule (checked),
+CLI.C.574062348,24503.06,24503.06,False,manual,item sum; annual wage rate is not a claim
+CLI.C.574105461,11546.00,11596.00,False,manual,stated total vs item sum
+CLI.C.574130618,18366.00,18366.00,False,rule (checked),
+CLI.C.574528636,17265.05,17265.05,False,rule (checked),
+CLI.C.574557652,12939.00,12939.00,False,rule (checked),
+CLI.C.574614291,40898.00,40898.00,False,rule (checked),
+CLI.C.574794906,32640.00,32640.00,False,rule (checked),
+CLI.C.574889926,29959.29,29959.29,False,rule (checked),
+CLI.C.574900316,33223.18,33223.18,False,manual,stated total plus follow-up treatment 3000
+CLI.C.574916504,29836.63,29836.63,False,rule (checked),
+CLI.C.574921347,20156.58,20156.58,False,rule (checked),
+CLI.C.574978285,35058.32,35058.32,False,rule (checked),
+CLI.C.574982319,16682.08,16682.08,False,rule (checked),
+CLI.C.574984000,30742.05,30742.05,False,rule (checked),
+CLI.C.575005415,15300.00,15500.00,False,manual,stated total vs item sum
+CLI.C.575048370,8993.85,8993.85,False,rule (checked),
+CLI.C.575511613,11782.56,11782.56,False,rule (checked),
+CLI.C.575558178,29499.74,29499.74,False,rule (checked),
+CLI.C.575667948,11204.53,11204.53,False,rule (checked),
+CLI.C.575813894,32608.26,32608.26,False,rule (checked),
+CLI.C.575829437,12369.62,12369.62,False,rule (checked),
+CLI.C.575865762,9840.53,9840.53,False,rule (checked),
+CLI.C.576020807,101228.00,101228.00,False,manual,stated total plus refund claim 500
+CLI.C.576109270,8331.95,8331.95,False,rule (checked),
+CLI.C.576423655,36815.83,36815.83,False,manual,stated total; items in brackets
+CLI.C.576546142,70351.73,70351.73,False,rule (checked),
+CLI.C.565947974,66091.47,66091.47,False,rule (checked),
+CLI.C.566365968,40809.80,40809.80,False,rule (checked),
+CLI.C.566474673,15809.12,15809.12,False,rule (checked),
+CLI.C.567123423,25416.45,25416.45,False,rule (checked),
+CLI.C.567796523,3081.74,3081.74,False,rule (checked),
+CLI.C.568133276,87189.79,87207.79,False,manual,stated total vs item sum
+CLI.C.568689026,10602.00,10620.00,False,manual,stated total vs item sum
+CLI.C.568689199,12689.50,12689.50,False,rule (checked),
+CLI.C.568727232,118438.34,118438.34,False,rule (checked),
+CLI.C.568751011,9562.70,9562.70,False,rule (checked),
+CLI.C.568819309,18743.24,18743.24,False,rule (checked),
+CLI.C.568895964,203357.21,203357.21,False,rule (checked),
+CLI.C.568896011,19298.57,19298.57,False,rule (checked),
+CLI.C.568924702,14000.00,14000.00,True,rule (checked),"open-ended, excluded from breach test: follow-up treatment cost to be fixed after appraisal"
+CLI.C.568995918,257371.70,257371.70,False,rule (checked),
+CLI.C.569048859,83113.28,83113.28,False,rule (checked),
+CLI.C.569095664,121487.28,121487.28,False,rule (checked),
+CLI.C.569167212,22296.07,22296.07,False,rule (checked),
+CLI.C.569283233,41424.02,41424.02,False,manual,net amount claimed after prepayment
+CLI.C.569522173,24293.63,92537.00,False,manual,amended at trial
+CLI.C.569675178,53504.89,89174.82,False,manual,amended to 60 percent share
+CLI.C.569836015,161900.80,161900.80,False,manual,amended after appraisal
+CLI.C.572829611,39832.29,39832.29,False,manual,items plus mental damages added at trial
+CLI.C.572830028,53794.47,54094.47,False,manual,nutrition item typo (30 vs 330)
+CLI.C.572925186,49925.36,49925.36,False,rule (checked),
+CLI.C.573028748,54510.85,54510.85,False,manual,stated total plus lawyer fee 5000
+CLI.C.573039608,14536.64,14536.64,False,rule (checked),
+CLI.C.573043175,34886.24,34886.24,False,rule (checked),
+CLI.C.573060751,19244.65,19244.65,False,rule (checked),
+CLI.C.573117038,7000.00,7000.00,False,rule (checked),
+CLI.C.573128296,16193.01,16193.01,False,manual,damages plus document fee 200
+CLI.C.573141031,24093.03,24093.03,False,rule (checked),
+CLI.C.573164263,28300.00,28300.00,False,rule (checked),
+CLI.C.573278799,22265.77,22265.77,False,rule (checked),
+CLI.C.573307595,104157.69,104157.69,False,rule (checked),
+CLI.C.573310503,14224.90,14224.90,False,manual,stated total; items in brackets
+CLI.C.573317093,21084.00,21084.00,False,rule (checked),
+CLI.C.573324838,61976.15,75176.15,False,manual,stated total vs item sum
+CLI.C.573343634,16821.00,16821.00,False,rule (checked),
+CLI.C.573344395,19800.00,19800.00,False,manual,stated total; items in brackets
+CLI.C.573415981,74925.50,74925.50,False,rule (checked),
+CLI.C.573420885,50000.00,50000.00,False,rule (checked),
+CLI.C.573446654,8293.63,8293.63,False,manual,stated total; wage rate is not a claim
+CLI.C.573488604,142276.90,142276.90,False,rule (checked),
+CLI.C.573509232,113204.27,113204.27,False,rule (checked),
+CLI.C.573559988,138254.00,138254.00,False,rule (checked),
+CLI.C.573564276,26199.51,63207.78,False,manual,amended at second hearing
+CLI.C.573703201,55617.68,55617.68,False,manual,item sum; daily wage is not a claim
+CLI.C.573851029,8947.55,8947.55,False,manual,stated total; items in brackets
+CLI.C.573913825,43312.89,43312.89,False,rule (checked),
+CLI.C.573956345,19253.87,19253.87,False,rule (checked),
+CLI.C.574009199,158480.50,158480.50,False,rule (checked),
+CLI.C.574048559,20343.52,20343.52,False,rule (checked),
+CLI.C.574091188,12056.78,12056.78,False,rule (checked),
+CLI.C.574100275,13288.87,13288.87,False,rule (checked),
+CLI.C.574129255,39321.00,39321.00,False,manual,subtotal plus mental damages 30000
+CLI.C.574140605,11522.59,11522.59,False,rule (checked),
+CLI.C.574199031,27816.51,27816.51,False,rule (checked),
+CLI.C.574329173,14123.35,14123.35,False,manual,stated total plus lawyer fee 6000
+CLI.C.574332938,22510.44,22510.44,False,rule (checked),
+CLI.C.574336159,15603.51,15603.51,False,manual,dot used as thousands separator
+CLI.C.574390580,33044.32,33044.32,False,rule (checked),
+CLI.C.574425575,5200.00,5200.00,False,rule (checked),
+CLI.C.574524597,8077.97,8277.97,False,manual,stated total vs item sum
+CLI.C.574539050,94313.88,94313.88,False,rule (checked),
+CLI.C.574652736,145148.53,145148.53,False,rule (checked),
+CLI.C.574663029,29294.60,29294.60,False,rule (checked),
+CLI.C.574679049,71203.00,71203.00,True,rule (checked),"open-ended, excluded from breach test: claim to be raised after disability appraisal"
+CLI.C.574683165,17801.53,17801.53,False,manual,amended after appraisal
+CLI.C.574750800,61622.05,61622.05,False,rule (checked),
+CLI.C.574753575,5974.09,5974.09,False,rule (checked),
+CLI.C.574765904,978050.57,978050.57,False,rule (checked),
+CLI.C.574815430,33022.91,33022.91,False,rule (checked),
+CLI.C.574839658,52441.17,52441.17,False,rule (checked),
+CLI.C.574899561,65812.31,65812.31,True,rule (checked),"open-ended, excluded from breach test: provisional total (暂计)"
+CLI.C.574941002,12596.71,12596.71,False,rule (checked),
+CLI.C.574943005,18469.45,18469.45,False,rule (checked),
+CLI.C.574975437,386398.44,386398.44,False,manual,amended at trial
+CLI.C.575029422,41980.15,41980.15,False,rule (checked),
+CLI.C.575054348,92987.46,92987.46,False,manual,item sum
+CLI.C.575062848,10500.00,13000.00,False,manual,amended
+CLI.C.575120030,22942.77,22942.77,False,rule (checked),
+CLI.C.575157251,10596.00,18696.00,False,manual,stated total vs item sum
+CLI.C.575208803,56540.00,56540.00,False,rule (checked),
+CLI.C.575565221,9364.31,9364.31,False,manual,item sum; monthly income is not a claim
+CLI.C.575572296,13800.29,13800.29,False,rule (checked),
+CLI.C.575581294,159267.89,159267.89,False,rule (checked),
+CLI.C.575649455,4401.76,4401.76,False,rule (checked),
+CLI.C.575669048,564.60,564.60,False,rule (checked),
+CLI.C.575714016,56044.76,56044.76,False,rule (checked),
+CLI.C.575749155,42868.00,42868.00,False,rule (checked),
+CLI.C.575762744,648064.85,648064.85,False,rule (checked),
+CLI.C.575781284,13291.90,13291.90,False,rule (checked),
+CLI.C.575789189,15039.88,15039.88,False,rule (checked),
+CLI.C.575827473,62011.76,62011.76,False,rule (checked),
+CLI.C.575839680,39174.15,44209.26,False,manual,amended at trial
+CLI.C.575885241,903869.52,903869.52,False,rule (checked),
+CLI.C.575986878,26550.30,26550.30,False,rule (checked),
+CLI.C.576034559,20225.06,20225.06,False,rule (checked),
+CLI.C.576050514,106271.15,106313.15,False,manual,stated total vs item sum
+CLI.C.576086348,24216.00,24216.00,False,rule (checked),
+CLI.C.576179118,101249.49,101249.49,False,rule (checked),
+CLI.C.576245505,5736.51,5736.51,False,rule (checked),
+CLI.C.576292135,14957.95,14957.95,False,rule (checked),
+CLI.C.576317128,89886.40,157382.83,False,manual,stated total vs item sum
+CLI.C.576319996,84574.31,84574.31,False,manual,stated total including amount added at trial
+CLI.C.576337662,10729.02,10729.02,False,rule (checked),
+CLI.C.576362947,229700.86,244489.72,False,manual,net of prepayment
+CLI.C.576363038,221598.50,231598.50,False,manual,amended
+CLI.C.576364008,8673.66,8673.66,False,rule (checked),
+CLI.C.576385569,40448.79,40448.79,False,rule (checked),
+CLI.C.576427534,117882.78,123152.78,False,manual,amount pursued vs computed total
+CLI.C.576512520,50370.05,50370.05,False,rule (checked),
+CLI.C.576524541,11038.25,11038.25,False,rule (checked),
+CLI.C.576548597,82597.64,82597.64,False,rule (checked),

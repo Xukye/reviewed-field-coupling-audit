@@ -1,0 +1,2 @@
+n_cases,n_maintain,maintain_pct,n_changed,n_changed_in_model_set,n_changed_nonzero_first,median_second_over_first,iqr_low,iqr_high,n_within_half_to_double,n_nonzero_both,loglog_slope,loglog_slope_se,loglog_r2,log_correlation_r
+542,481,88.75,61,60,58,0.933,0.7,1.421,45,56,0.777,0.05,0.817,0.904

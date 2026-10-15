@@ -2,8 +2,8 @@ source_model,n,pct1_count,pct5_count,pct10_count,delta_1_to_5,delta_5_to_10
 True awards,165,106,106,114,0,8
 Gemini-2.5,165,44,47,53,3,6
 GLM-5.1,165,45,46,52,1,6
-DeepSeek-v4-pro,165,93,96,97,3,1
-Qwen3.7-plus,165,112,115,117,3,2
+DeepSeek-v4-pro,165,98,101,102,3,1
+Qwen3.7-plus,165,117,119,121,2,2
 MiMo,165,138,138,139,0,1
-Grok-4.3,165,124,125,125,1,0
+Grok-4.3,165,130,131,131,1,0
 DeepSeek-Flash,165,143,143,143,0,0

@@ -1,8 +1,8 @@
 model,modified_positive_n,stick_n,stick_pct,hit_second_n,hit_second_pct,stick_hit_n,stick_miss_n,depart_hit_n,depart_miss_n,type
 Gemini-2.5,60,14,23.3,4,6.7,1,13,3,43,non-copier
 GLM-5.1,60,14,23.3,2,3.3,0,14,2,44,non-copier
-DeepSeek-v4-pro,60,31,51.7,1,1.7,1,30,0,29,partial
-Qwen3.7-plus,60,37,61.7,1,1.7,1,36,0,23,copier
+DeepSeek-v4-pro,60,34,56.7,1,1.7,1,33,0,26,partial
+Qwen3.7-plus,60,39,65.0,1,1.7,1,38,0,21,copier
 MiMo,60,49,81.7,1,1.7,1,48,0,11,copier
-Grok-4.3,60,45,75.0,1,1.7,1,44,0,15,copier
+Grok-4.3,60,47,78.3,1,1.7,1,46,0,13,copier
 DeepSeek-Flash,60,49,81.7,1,1.7,1,48,0,11,copier

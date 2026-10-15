@@ -1,8 +1,8 @@
 model,true_anchor_abslog_to_truth_median,modified_true_anchor_abslog_to_truth_median,modified_true_anchor_abslog_to_first_median,pseudo_anchor_abslog_to_displayed_median,pseudo_anchor_abslog_to_truth_median,true_anchor_abslog_to_truth_n,modified_true_anchor_abslog_to_truth_n,modified_true_anchor_abslog_to_first_n,pseudo_anchor_abslog_to_displayed_n,pseudo_anchor_abslog_to_truth_n
 Gemini-2.5,0.311,0.357,0.317,0.585,0.514,146,55,57,592,584
 GLM-5.1,0.376,0.501,0.253,0.369,0.593,147,55,57,595,587
-DeepSeek-v4-pro,0.269,0.516,0.0,0.175,0.821,145,54,56,584,577
-Qwen3.7-plus,0.051,0.386,0.0,0.0,0.6,146,55,57,593,585
+DeepSeek-v4-pro,0.249,0.516,0.0,0.08,0.798,145,54,56,585,578
+Qwen3.7-plus,0.019,0.386,0.0,0.0,0.589,146,55,57,593,585
 MiMo,0.0,0.452,0.0,0.0,0.559,147,55,57,596,588
-Grok-4.3,0.073,0.406,0.0,0.0,0.834,147,55,57,596,588
+Grok-4.3,0.059,0.452,0.0,0.0,0.881,147,55,57,596,588
 DeepSeek-Flash,0.0,0.405,0.0,0.0,0.732,147,55,57,595,587

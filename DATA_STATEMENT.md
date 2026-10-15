@@ -5,7 +5,10 @@ The case identifiers are legal database citation references. Full judgment texts
 The released case-level data are limited to:
 
 - case reference identifiers;
-- extracted first-instance and second-instance award amounts for the stress set;
+- extracted first-instance and second-instance award amounts for the 542 paired appeals and the 165-case model set;
+- the plaintiff's claimed total for the 149 non-zero model-set cases (numbers only, not the claim text);
+- a flag for whether the prompt carried newly found appellate facts;
+- the sampling record of the model set;
 - exact award-maintain/change labels;
 - frame-membership flags used for the analysis;
 - model raw responses and parsed numeric outputs.

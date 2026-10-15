@@ -1,8 +1,8 @@
 model,blind_hit_calib_pct,balanced_accuracy_pct,chi2_p,fisher_p,phi,pseudo_anchor_copy_calib_pct,escape_and_hit_calib_pct,ability_profile,copying_profile
 Gemini-2.5,10.4,54.0,0.268,0.288,0.086,19.5,6.4,weak signal only,non-copier/noisy
 GLM-5.1,10.3,53.6,0.325,0.37,0.077,26.1,7.0,weak signal only,non-copier/noisy
-DeepSeek-v4-pro,15.6,55.1,0.2,0.251,0.1,50.0,2.3,weak signal only,partial copier
-Qwen3.7-plus,8.8,56.3,0.09,0.113,0.132,62.8,2.8,weak signal only,strong copier
+DeepSeek-v4-pro,15.6,53.6,0.365,0.408,0.071,51.4,2.3,weak signal only,partial copier
+Qwen3.7-plus,8.8,55.6,0.123,0.149,0.12,62.8,2.8,weak signal only,strong copier
 MiMo,8.8,51.5,0.605,0.664,0.04,72.8,2.4,weak signal only,strong copier
-Grok-4.3,7.8,50.6,0.864,0.853,0.013,82.5,1.2,not shown,strong copier
+Grok-4.3,7.8,50.8,0.799,0.843,0.02,82.8,1.2,not shown,strong copier
 DeepSeek-Flash,9.5,53.9,0.153,0.162,0.111,86.1,1.0,weak signal only,strong copier

@@ -1,0 +1,8 @@
+model,cases_maintain,cases_change,rows,reweighted_copy_pct,cluster_ci95_low,cluster_ci95_high
+Gemini-2.5,92,57,596,19.5,15.7,23.7
+GLM-5.1,92,57,596,26.1,21.4,31.0
+DeepSeek-v4-pro,92,57,596,51.4,44.6,58.1
+Qwen3.7-plus,92,57,596,62.8,56.1,69.5
+MiMo,92,57,596,72.8,67.0,78.3
+Grok-4.3,92,57,596,82.8,77.3,88.0
+DeepSeek-Flash,92,57,596,86.1,81.2,90.5

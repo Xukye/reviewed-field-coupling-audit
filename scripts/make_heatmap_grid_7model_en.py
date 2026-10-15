@@ -44,7 +44,7 @@ mpl.rcParams.update(
         ],
         "mathtext.fontset": "stix",
         "axes.unicode_minus": False,
-        "font.size": 7,
+        "font.size": 8.6,
         "axes.linewidth": 0.6,
         "axes.spines.right": False,
         "axes.spines.top": False,
@@ -179,8 +179,8 @@ def main() -> None:
     x_centers = (XCOORD[:-1] + XCOORD[1:]) / 2
     zero_cmap = LinearSegmentedColormap.from_list("zero_grid", ["#f2f8fb", "#f2f8fb"])
 
-    fig, axes = plt.subplots(2, 4, figsize=(8.6, 4.75), sharex=False, sharey=False)
-    fig.subplots_adjust(left=0.060, right=0.990, top=0.895, bottom=0.135, wspace=0.145, hspace=0.320)
+    fig, axes = plt.subplots(2, 4, figsize=(6.3, 4.4), sharex=False, sharey=False)
+    fig.subplots_adjust(left=0.085, right=0.995, top=0.935, bottom=0.145, wspace=0.10, hspace=0.27)
     mesh = None
     for ri, row in enumerate(MODEL_GRID):
         for ci, item in enumerate(row):
@@ -223,7 +223,7 @@ def main() -> None:
             for i, (_cond, k, _label) in enumerate(CONDS):
                 for j in range(N_COL):
                     value = int(mat[i, j])
-                    if value >= threshold:
+                    if False:  # in-cell counts dropped: they cannot fit at >= 6 pt in print; counts are in the CSV
                         text_color = "white" if norm(value) > 0.68 else "#20252b"
                         stroke_color = "#20252b" if text_color == "white" else "white"
                         ax.text(
@@ -244,7 +244,7 @@ def main() -> None:
                     [i + 1],
                     marker="^",
                     color=GREEN,
-                    ms=3.8,
+                    ms=4.4,
                     mec="white",
                     mew=0.35,
                     zorder=8,
@@ -255,35 +255,23 @@ def main() -> None:
             ax.set_ylim(len(CONDS), 0)
             ax.set_yticks(np.arange(len(CONDS)) + 0.5)
             if ci == 0:
-                ax.set_yticklabels([label for _cond, _k, label in CONDS], fontsize=6.4, fontweight="bold")
+                ax.set_yticklabels([label for _cond, _k, label in CONDS], fontsize=8.6, fontweight="bold")
             else:
                 ax.set_yticklabels([])
             tick_values = [0.1, 1 / 3, 1, 3, 10]
             ax.set_xticks([np.log10(value) for value in tick_values])
-            ax.set_xticklabels(["0.1", "1/3", "1", "3", "10"], fontsize=6.1)
+            ax.set_xticklabels(["0.1", "1/3", "1", "3", "10"], fontsize=8.4)
             n_min = min(counts_by_model[model].values())
             n_max = max(counts_by_model[model].values())
             n_text = f"n={n_min}" if n_min == n_max else f"n={n_min}-{n_max}"
-            ax.set_title(f"{model}\n{camp}, {n_text}", fontsize=7.1, pad=4, fontweight="bold", color=NEUTRAL)
+            ax.set_title(model, fontsize=9.0, pad=3, fontweight="bold", color=NEUTRAL)
             for spine in ax.spines.values():
                 spine.set_visible(False)
             if ri == 1:
-                ax.set_xlabel("displayed anchor / output", fontsize=6.5, labelpad=2)
+                ax.set_xlabel("displayed anchor / output", fontsize=8.4, labelpad=1.5)
 
     legend_ax = axes[1][3]
     legend_ax.set_axis_off()
-
-    legend_ax.text(
-        0.50,
-        1.060,
-        "Guide",
-        transform=legend_ax.transAxes,
-        ha="center",
-        va="bottom",
-        fontsize=7.1,
-        fontweight="bold",
-        color=NEUTRAL,
-    )
 
     group_left = 0.10
     group_width = 0.80
@@ -292,23 +280,32 @@ def main() -> None:
     text_x = marker_left + icon_slot_w + 0.025
     icon_center_x = marker_left + icon_slot_w / 2
 
-    colorbar_ax = legend_ax.inset_axes([group_left, 0.705, group_width, 0.075])
-    scalar = mpl.cm.ScalarMappable(norm=norm, cmap=cmap)
-    scalar.set_array([])
-    cbar = fig.colorbar(scalar, cax=colorbar_ax, orientation="horizontal")
-    cbar.set_ticks([1, 2, 5, 10, 25, 50, 100])
-    cbar.set_ticklabels(["1", "2", "5", "10", "25", "50", "100"])
-    cbar.ax.minorticks_off()
-    cbar.ax.xaxis.set_minor_locator(mpl.ticker.NullLocator())
-    cbar.ax.tick_params(labelsize=5.7, width=0.55, length=2.0, pad=1.5)
-    cbar.outline.set_linewidth(0.55)
-    cbar.ax.set_title("case count", fontsize=6.2, pad=2.5)
+    # Case-count scale split into two rows (same colour map and log norm) for finer reading.
+    legend_ax.text(group_left + group_width / 2, 0.985, "case count", transform=legend_ax.transAxes,
+                   ha="center", va="bottom", fontsize=8.4, color=NEUTRAL)
+    vmax_tick = int(round(vmax))
+    for y0, lo, hi, ticks in [
+        (0.865, 1, 10, [1, 2, 3, 5, 10]),
+        (0.665, 10, vmax_tick, [10, 20, 40, 80, vmax_tick]),
+    ]:
+        bar_ax = legend_ax.inset_axes([group_left, y0, group_width, 0.075])
+        xs = np.linspace(np.log10(lo), np.log10(hi), 256)
+        bar_ax.imshow(cmap(norm(10 ** xs))[np.newaxis, :, :], aspect="auto",
+                      extent=[xs[0], xs[-1], 0, 1])
+        bar_ax.set_xlim(xs[0], xs[-1])
+        bar_ax.set_yticks([])
+        bar_ax.set_xticks([np.log10(t) for t in ticks])
+        bar_ax.set_xticklabels([str(t) for t in ticks])
+        bar_ax.tick_params(axis="x", labelsize=8.2, width=0.55, length=2.0, pad=1.5)
+        for spine in bar_ax.spines.values():
+            spine.set_visible(True)
+            spine.set_linewidth(0.55)
 
     legend_ax.add_patch(
         plt.Rectangle(
-            (marker_left + 0.012, 0.430),
+            (marker_left + 0.012, 0.300),
             0.052,
-            0.120,
+            0.150,
             transform=legend_ax.transAxes,
             fill=False,
             edgecolor=RED,
@@ -318,28 +315,28 @@ def main() -> None:
     )
     legend_ax.text(
         text_x,
-        0.516,
+        0.430,
         "displayed anchor",
         transform=legend_ax.transAxes,
         ha="left",
         va="center",
-        fontsize=6.3,
+        fontsize=8.4,
         fontweight="bold",
         color=RED,
     )
     legend_ax.text(
         text_x,
-        0.462,
+        0.320,
         "anchor/output = 1",
         transform=legend_ax.transAxes,
         ha="left",
         va="center",
-        fontsize=6.1,
+        fontsize=8.2,
         color=NEUTRAL,
     )
     legend_ax.plot(
         [icon_center_x, icon_center_x],
-        [0.222, 0.356],
+        [0.010, 0.150],
         transform=legend_ax.transAxes,
         color=GREEN,
         lw=1.0,
@@ -348,7 +345,7 @@ def main() -> None:
     )
     legend_ax.plot(
         [icon_center_x],
-        [0.356],
+        [0.150],
         transform=legend_ax.transAxes,
         marker="^",
         color=GREEN,
@@ -359,45 +356,45 @@ def main() -> None:
     )
     legend_ax.text(
         text_x,
-        0.312,
-        "true first-instance landing",
+        0.135,
+        "true first instance",
         transform=legend_ax.transAxes,
         ha="left",
         va="center",
-        fontsize=6.3,
+        fontsize=8.4,
         fontweight="bold",
         color=GREEN,
     )
     legend_ax.text(
         text_x,
-        0.258,
+        0.025,
         "anchor/output = k",
         transform=legend_ax.transAxes,
         ha="left",
         va="center",
-        fontsize=6.1,
+        fontsize=8.2,
         color=NEUTRAL,
     )
 
     axes[0][0].annotate(
         "copy-prone models",
-        xy=(-0.24, 0.5),
+        xy=(-0.30, 0.5),
         xycoords="axes fraction",
         ha="center",
         va="center",
         rotation=90,
-        fontsize=7.3,
+        fontsize=8.8,
         fontweight="bold",
         color=RED,
     )
     axes[1][0].annotate(
-        "partial / anchor-resistant",
-        xy=(-0.24, 0.5),
+        "partial / resistant",
+        xy=(-0.30, 0.5),
         xycoords="axes fraction",
         ha="center",
         va="center",
         rotation=90,
-        fontsize=7.3,
+        fontsize=8.8,
         fontweight="bold",
         color="#2471A3",
     )
