@@ -22,6 +22,9 @@ Model runs:
 - `raw_api_outputs/`: raw API strings and parsed numeric outputs for the seven models.
 - `prompts/prompt_templates.json`: prompt templates and condition definitions.
 - `metadata/model_runs.csv`: model names and file mapping.
+- `query_scripts/`: the scripts that queried each provider (model names, endpoints, temperature 0, reasoning off); they need the non-released case file to run.
+
+See `data/README.md` for every data file, how the samples were built, and how to retrieve the judgments from PKULaw by their citation codes.
 
 Scripts and outputs:
 
