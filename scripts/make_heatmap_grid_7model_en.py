@@ -157,7 +157,7 @@ def write_counts_csv(path: Path, matrices: dict[str, np.ndarray]) -> None:
                     )
 
 
-def main() -> None:
+def main(show_counts: bool = False) -> None:
     positive_case_ids = load_positive_case_ids()
     matrices: dict[str, np.ndarray] = {}
     counts_by_model: dict[str, dict[str, int]] = {}
@@ -179,7 +179,7 @@ def main() -> None:
     x_centers = (XCOORD[:-1] + XCOORD[1:]) / 2
     zero_cmap = LinearSegmentedColormap.from_list("zero_grid", ["#f2f8fb", "#f2f8fb"])
 
-    fig, axes = plt.subplots(2, 4, figsize=(6.3, 3.75), sharex=False, sharey=False)
+    fig, axes = plt.subplots(2, 4, figsize=(11.5, 7.0) if show_counts else (6.3, 3.75), sharex=False, sharey=False)
     fig.subplots_adjust(left=0.085, right=0.995, top=0.935, bottom=0.145, wspace=0.10, hspace=0.27)
     mesh = None
     for ri, row in enumerate(MODEL_GRID):
@@ -223,7 +223,9 @@ def main() -> None:
             for i, (_cond, k, _label) in enumerate(CONDS):
                 for j in range(N_COL):
                     value = int(mat[i, j])
-                    if False:  # in-cell counts dropped: they cannot fit at >= 6 pt in print; counts are in the CSV
+                    # The paper figure omits in-cell counts (they cannot fit at >= 6 pt in print);
+                    # the counts version prints counts >= 3 for on-screen reading.
+                    if show_counts and value >= threshold:
                         text_color = "white" if norm(value) > 0.68 else "#20252b"
                         stroke_color = "#20252b" if text_color == "white" else "white"
                         ax.text(
@@ -398,7 +400,7 @@ def main() -> None:
         fontweight="bold",
         color="#2471A3",
     )
-    out_base = FIG_DIR / "fig_heatmap_grid_7model_en"
+    out_base = FIG_DIR / ("fig_heatmap_grid_7model_en_counts" if show_counts else "fig_heatmap_grid_7model_en")
     fig.savefig(out_base.with_suffix(".png"), bbox_inches="tight", dpi=240)
     fig.savefig(out_base.with_suffix(".pdf"), bbox_inches="tight")
     fig.savefig(out_base.with_suffix(".svg"), bbox_inches="tight")
@@ -410,4 +412,5 @@ def main() -> None:
 
 
 if __name__ == "__main__":
-    main()
+    main()  # Figure 1 as printed in the paper
+    main(show_counts=True)  # same figure with in-cell case counts

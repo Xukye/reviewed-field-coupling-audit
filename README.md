@@ -31,7 +31,7 @@ Scripts and outputs:
 | Script | Reproduces | Output in `tables/` |
 |---|---|---|
 | `scripts/recompute_reviewed_award_metrics.py` | Tables 1, 2, 4, 5; Table 3 point estimates; continuous distances | `reviewed_award_*.csv` |
-| `scripts/make_heatmap_grid_7model_en.py` | Figure 1 | `heatmap_grid_7model_cell_counts.csv`, `figs/` |
+| `scripts/make_heatmap_grid_7model_en.py` | Figure 1 (`figs/fig_heatmap_grid_7model_en.*`, as printed) and the same figure with in-cell counts of 3 or more (`figs/fig_heatmap_grid_7model_en_counts.*`) | `heatmap_grid_7model_cell_counts.csv`, `figs/` |
 | `scripts/compute_human_coupling_542.py` | Section 4 human-side statistics | `human_coupling_542.csv` |
 | `scripts/compute_claim_ceiling_and_cluster_ci.py` | Section 6 claim-ceiling paragraph; Table 3 confidence intervals | `claim_ceiling_breach_summary.csv`, `pseudo_copy_cluster_ci.csv` |
 | `scripts/compute_new_facts_departure.py` | Section 7 newly-found-facts analysis | `new_facts_departure_165.csv` |
