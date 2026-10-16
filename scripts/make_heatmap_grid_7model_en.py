@@ -179,7 +179,7 @@ def main() -> None:
     x_centers = (XCOORD[:-1] + XCOORD[1:]) / 2
     zero_cmap = LinearSegmentedColormap.from_list("zero_grid", ["#f2f8fb", "#f2f8fb"])
 
-    fig, axes = plt.subplots(2, 4, figsize=(6.3, 4.4), sharex=False, sharey=False)
+    fig, axes = plt.subplots(2, 4, figsize=(6.3, 3.75), sharex=False, sharey=False)
     fig.subplots_adjust(left=0.085, right=0.995, top=0.935, bottom=0.145, wspace=0.10, hspace=0.27)
     mesh = None
     for ri, row in enumerate(MODEL_GRID):
@@ -286,7 +286,7 @@ def main() -> None:
     vmax_tick = int(round(vmax))
     for y0, lo, hi, ticks in [
         (0.865, 1, 10, [1, 2, 3, 5, 10]),
-        (0.665, 10, vmax_tick, [10, 20, 40, 80, vmax_tick]),
+        (0.640, 10, vmax_tick, [10, 20, 40, 80, vmax_tick]),
     ]:
         bar_ax = legend_ax.inset_axes([group_left, y0, group_width, 0.075])
         xs = np.linspace(np.log10(lo), np.log10(hi), 256)

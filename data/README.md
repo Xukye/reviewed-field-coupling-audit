@@ -18,7 +18,7 @@ Every case is identified by its PKULaw (北大法宝) citation code, for example
 | `claim_totals_149.csv` | 149 | `case_ref`, `claim_final`, `claim_max`, `open_ended`, `extraction`, `note` | Claim-ceiling analysis (Section 6) |
 | `new_appellate_facts_165.csv` | 165 | `case_ref`, `new_appellate_facts` | Newly-found-facts analysis (Section 7) |
 
-Amounts are the operative principal compensation in yuan, after damages items and liability shares are aggregated; interest, fees, costs, counterclaims and refunds are excluded. Award totals were extracted independently by several LLM agents from the operative part of each judgment, and a legally qualified reviewer resolved the few disagreements against the judgment text. Claim totals were extracted from the claim text shown to the models and checked by hand; `claim_final` is the operative claim after any amendment stated in the text, `claim_max` the largest amount claimed anywhere in it, and claims stated as provisional are flagged `open_ended`.
+Amounts are the operative principal compensation in yuan, after damages items and liability shares are aggregated; interest, fees, costs, counterclaims and refunds are excluded. Award totals were read from each judgment independently by three Codex subagents; a legally trained reviewer checked the few mismatches against the text. Claim totals were extracted from the claim text shown to the models and checked by hand; `claim_final` is the operative claim after any amendment stated in the text, `claim_max` the largest amount claimed anywhere in it, and claims stated as provisional are flagged `open_ended`.
 
 ## How the samples were built
 
